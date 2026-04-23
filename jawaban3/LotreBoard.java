@@ -5,7 +5,7 @@ import java.util.Random;
 public class LotreBoard {
     char[][] board = new char[4][5];
     boolean[][] revealed = new boolean[4][5];
-    int[][] data = new int[4][5]; // 0 aman, 1 bom
+    int[][] data = new int[4][5];
 
     public void generateBoard() {
         Random rand = new Random();
@@ -51,10 +51,10 @@ public class LotreBoard {
         revealed[row][col] = true;
 
         if (data[row][col] == 1) {
-            return false; // kena bom
+            return false;
         }
 
-        return true; // aman
+        return true;
     }
 
     public boolean isGameOver() {
